@@ -10,9 +10,6 @@ __pycache__/
 # Logs
 *.log
 
-# Dados do Docker
-docker-compose.yml
-
 # Sistemas operacionais
 .DS_Store
 Thumbs.db
