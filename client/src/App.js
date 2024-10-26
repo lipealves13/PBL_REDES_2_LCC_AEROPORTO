@@ -1,6 +1,7 @@
 import React from 'react';
 import FlightList from './components/FlightList';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -17,7 +18,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <div>
-        <h1>Sistema de Reservas de Voos</h1>
+      <Typography variant="h3" component="h3" gutterBottom>
+        Sistema de Reservas de Voos
+      </Typography>
         <FlightList />
       </div>
     </ThemeProvider>
