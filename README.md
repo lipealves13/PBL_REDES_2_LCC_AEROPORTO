@@ -4,19 +4,11 @@ Este projeto propõe uma solução distribuída para integração de companhias 
 
 ## Introdução
 
-As companhias aéreas de baixo custo têm se destacado no Brasil, mas enfrentam desafios operacionais para expandir rotas e atender melhor a demanda de passageiros. Este sistema visa facilitar a cooperação entre as LCCs brasileiras, mantendo a independência operacional de cada uma.
-
-### Problema
-
-As LCCs precisam expandir a oferta de voos sem incorrer em altos custos. A colaboração é uma estratégia para aumentar a eficiência e melhorar a satisfação dos clientes.
-
-### Solução
-
-Desenvolvemos um sistema distribuído e descentralizado usando APIs RESTful e contêineres Docker, permitindo que cada LCC gerencie suas operações enquanto compartilha voos com as parceiras.
+Para maximizar o lucro e otimizar o uso dos assentos, três companhias aéreas de baixo custo (LCCs) brasileiras decidiram compartilhar trechos de voos, permitindo que clientes reservem passagens em uma única compra. Cada companhia possui seu próprio servidor centralizado do sistema VENDEPASS, mas desenvolvemos uma API RESTful que conecta esses servidores, facilitando o acesso às rotas e assentos disponíveis. Essa arquitetura distribuída e descentralizada elimina a necessidade de um servidor central e permite a expansão futura para outras LCCs. Com contêineres Docker, garantimos escalabilidade e portabilidade, enquanto um sistema de reserva sincronizado assegura a prioridade dos assentos na primeira compra. O resultado é uma plataforma integrada que amplia as opções de rotas e melhora a experiência do usuário.
 
 ## Arquitetura
 
-A arquitetura do sistema é distribuída e descentralizada, eliminando a necessidade de um servidor central. Cada LCC possui um servidor com APIs RESTful que comunicam-se diretamente entre si. A interface para os usuários finais é uma aplicação web desenvolvida em React com Material-UI.
+A arquitetura do sistema é distribuída e descentralizada, com cada LCC operando seu próprio servidor que utiliza APIs RESTful para comunicação direta entre si. A interface para os usuários finais é uma aplicação web desenvolvida em React com Material-UI, garantindo uma experiência de usuário otimizada.
 
 ![Arquitetura do Sistema](images/diagrama_de_arquitetura_de_sistema.jpg)   
 *Figura 1*: Diagrama da arquitetura do sistema, ilustrando a interação entre clientes e servidores das LCCs.
