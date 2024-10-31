@@ -87,7 +87,7 @@ Endpoints principais:
   - Falta de roteamento complexo
 - **Desempenho**: Resultados satisfatórios em testes locais
 
-![Fluxo de Reserva](images/fluxo_reserva.png)  
+![Fluxo de Reserva](images/fluxo_reserva.jpg)  
 *Figura 2*: Fluxo de interação durante o processo de reserva.
 
 ## Conclusão
