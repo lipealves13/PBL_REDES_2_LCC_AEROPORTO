@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  lcc1:
+    build: ./lcc1
+    ports:
+      - "3001:3001"
+    networks:
+      - lcc-network
+
+  lcc2:
+    build: ./lcc2
+    ports:
+      - "3002:3002"
+    networks:
+      - lcc-network
+
+  lcc3:
+    build: ./lcc3
+    ports:
+      - "3003:3003"
+    networks:
+      - lcc-network
+
+  client:
+    build: ./client
+    ports:
+      - "80:80"
+    networks:
+      - lcc-network
+
+networks:
+  lcc-network:
+    driver: bridge
