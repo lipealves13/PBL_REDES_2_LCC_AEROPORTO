@@ -18,7 +18,7 @@ Desenvolvemos um sistema distribuído e descentralizado usando APIs RESTful e co
 
 A arquitetura do sistema é distribuída e descentralizada, eliminando a necessidade de um servidor central. Cada LCC possui um servidor com APIs RESTful que comunicam-se diretamente entre si. A interface para os usuários finais é uma aplicação web desenvolvida em React com Material-UI.
 
-![Arquitetura do Sistema](images/diagrama_de_arquitetura_de_sistema.png)   
+![Arquitetura do Sistema](images/diagrama_de_arquitetura_de_sistema.jpg)   
 *Figura 1*: Diagrama da arquitetura do sistema, ilustrando a interação entre clientes e servidores das LCCs.
 
 ## Desenvolvimento dos Componentes
