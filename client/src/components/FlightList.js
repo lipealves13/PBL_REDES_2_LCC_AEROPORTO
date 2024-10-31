@@ -27,7 +27,7 @@ function FlightList() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:3001/flights/allflights')
+      .get('http://localhost:3101/flights/allflights')
       .then((response) => {
         setFlights(response.data);
         setLoading(false);
@@ -49,7 +49,7 @@ function FlightList() {
     }
 
     axios
-      .post('http://localhost:3001/reservations', {
+      .post('http://localhost:3101/reservations', {
         flightId: selectedFlight.id,
         passengerName: passengerName,
       })

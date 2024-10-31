@@ -1,24 +1,22 @@
-version: '3'
-
 services:
   lcc1:
     build: ./lcc1
     ports:
-      - "3001:3001"
+      - "3101:3001"  # Alterado para 3101
     networks:
       - lcc-network
 
   lcc2:
     build: ./lcc2
     ports:
-      - "3002:3002"
+      - "3102:3002"  # Alterado para 3102
     networks:
       - lcc-network
 
   lcc3:
     build: ./lcc3
     ports:
-      - "3003:3003"
+      - "3103:3003"  # Alterado para 3103
     networks:
       - lcc-network
 
