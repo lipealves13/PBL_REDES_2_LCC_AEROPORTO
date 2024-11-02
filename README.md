@@ -154,6 +154,6 @@ Para acompanhar a execução e verificar possíveis erros:
   docker-compose ps
 
 ## 6. Parar e Limpar os Contêineres
-Após o uso, para interromper e remover os contêineres, execute:
-  - ```bash
+- Após o uso, para interromper e remover os contêineres, execute:
+  ```bash
   docker-compose down
