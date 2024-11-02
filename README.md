@@ -96,47 +96,64 @@ A solução desenvolvida permite a colaboração entre LCCs brasileiras, amplian
 
 ---
 
-## Passo a Passo para Executar o Sistema de Reserva de Passagens Aéreas entre LCCs Brasileiras
+# Passo a Passo para Executar o Sistema de Reserva de Passagens Aéreas entre LCCs Brasileiras
+
 Para iniciar o sistema, certifique-se de que todos os pré-requisitos estão atendidos e siga as instruções abaixo.
 
 ## Pré-Requisitos
-Docker e Docker Compose instalados.
 
-Verifique as versões com docker --version e docker-compose --version.
+- **Docker** e **Docker Compose** instalados.
+- Verifique as versões com os seguintes comandos:
+  ```bash
+  docker --version
+  docker-compose --version
+
 Docker Desktop deve estar aberto.
 
-1. Configuração e Execução dos Contêineres
-No diretório onde o arquivo docker-compose.yml está localizado, execute o seguinte comando no terminal ou PowerShell:
+## 1. Configuração e Execução dos Contêineres
 
-docker-compose up --build
+No diretório onde o arquivo `docker-compose.yml` está localizado, execute o seguinte comando no terminal ou PowerShell:
+
+- ```bash
+  docker-compose up --build
 
 Este comando fará o seguinte:
 
-Constrói as imagens Docker para os serviços lcc1, lcc2, lcc3 e client.
-Inicia os contêineres com base nas imagens criadas, conectando-os na rede lcc-network.
-Verificar o Status
-Após a execução do comando, o Docker Compose exibirá logs indicando que os contêineres foram iniciados. Você verá mensagens de log para cada serviço, como lcc1, lcc2, lcc3 e client.
+- Constrói as imagens Docker para os serviços `lcc1`, `lcc2`, `lcc3` e `client`.
+- Inicia os contêineres com base nas imagens criadas, conectando-os na rede `lcc-network`.
 
-2. Acessar o Cliente Web
+## 2. Verificar o Status
+
+Após a execução do comando, o Docker Compose exibirá logs indicando que os contêineres foram iniciados. Você verá mensagens de log para cada serviço, como `lcc1`, `lcc2`, `lcc3` e `client`.
+
+## 3. Acessar o Cliente Web
+
 Após a inicialização bem-sucedida dos contêineres, abra um navegador e acesse o cliente web:
 
-URL: http://localhost
+- **URL:** [http://localhost](http://localhost)
+
 Isso abrirá a interface de pesquisa e reserva de voos.
 
-3. Interagir com a Aplicação
+## 4. Interagir com a Aplicação
+
 No cliente web, você poderá:
 
-Pesquisar Voos: O sistema exibirá uma lista de voos agregados das companhias parceiras.
-Reservar Passagens: O cliente permite fazer reservas, acionando as APIs das companhias aéreas LCC.
-4. Verificar Logs e Status dos Contêineres
+- **Pesquisar Voos:** O sistema exibirá uma lista de voos agregados das companhias parceiras.
+- **Reservar Passagens:** O cliente permite fazer reservas, acionando as APIs das companhias aéreas LCC.
+
+## 5. Verificar Logs e Status dos Contêineres
+
 Para acompanhar a execução e verificar possíveis erros:
 
-Logs dos Contêineres:
-bash
-Copy code
-docker-compose logs
-Status dos Contêineres:
-bash
-Copy code
-docker-compose ps
-Esses comandos permitem visualizar o status de cada contêiner e monitorar logs para diagnóstico.
+- **Logs dos Contêineres:**
+  ```bash
+  docker-compose logs
+
+- **Status dos Contêineres:**
+  ```bash
+  docker-compose ps
+
+## 6. Parar e Limpar os Contêineres
+Após o uso, para interromper e remover os contêineres, execute:
+  - ```bash
+  docker-compose down
