@@ -24,6 +24,8 @@ router.post('/', async (req, res) => {
     };
     reservations.push(reservation);
     res.status(201).json(reservation);
+    flights[flightId].seatsAvailable = flights[flightId].seatsAvailable - 1; 
+
   } else {
     // Obter voos dos parceiros
     const partnerFlights = await getPartnerFlights();
@@ -34,9 +36,9 @@ router.post('/', async (req, res) => {
       let partnerUrl = null;
 
       if (flight.airline === 'LCC1') {
-        partnerUrl = 'http://localhost:3001/reservations';
+        partnerUrl = 'http://localhost:3101/reservations';
       } else if (flight.airline === 'LCC2') {
-        partnerUrl = 'http://localhost:3002/reservations';
+        partnerUrl = 'http://localhost:3102/reservations';
       }
 
       if (partnerUrl) {

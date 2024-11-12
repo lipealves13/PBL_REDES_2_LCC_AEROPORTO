@@ -1,8 +1,8 @@
 const axios = require('axios');
 
 const partners = [
-  'http://lcc2:3002/flights/partner/flights',
-  'http://lcc3:3003/flights/partner/flights',
+  'http://lcc2:3102/flights/partner/flights',
+  'http://lcc3:3103/flights/partner/flights',
 ];
 
 const API_KEY = 'secretapikey123';
